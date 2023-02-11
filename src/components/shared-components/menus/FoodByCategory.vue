@@ -46,7 +46,6 @@
   </script>
   
   <style>
-
   .slide-fade-enter-active {
     transition: all .2s ease-in;
   }
@@ -58,10 +57,5 @@
     opacity: 0;
     transform: translateY(-40px);
   }
-
-  .slide-fade-leave, .slide-fade-enter-to{
-    transform: translateY(3px);
-  }
-
   </style>
   
