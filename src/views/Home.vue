@@ -1,11 +1,13 @@
 <template>
     <div class="w-full min-h-screen bg-black">
         <NavBar/>
+        <FoodByCategory/>
     </div>
   </template>
   
   <script>
 import NavBar from "../components/shared-components/NavBar.vue"
+import FoodByCategory from "../components/shared-components/menus/FoodByCategory.vue"
   export default {
     data() {
       return {
@@ -13,7 +15,8 @@ import NavBar from "../components/shared-components/NavBar.vue"
       }
     },
     components: {
-        NavBar
+        NavBar,
+        FoodByCategory
     }
   }
   </script>
