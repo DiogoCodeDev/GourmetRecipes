@@ -1,14 +1,14 @@
   <template>
     <div>
-      <div class="flex justify-between items-center w-full h-16 bg-yellow-200">
+      <div class="flex justify-between items-center w-full h-14 bg-neutral-200">
         <p class="ml-44 cursor-pointer font-semibold" @click="hiddeCategory()"> Receitas por categoria </p>
         <img class="h-3 cursor-pointer mr-28 duration-100" id="arrow" @click="hiddeCategory()" :src="require('@/assets/imgs/arrow-icon.webp')" alt=""/>
       </div>
       <transition name="slide-fade">
-        <div v-if="showCategory === true" class="flex ease-in-out w-full justify-center items-center bg-white"
+        <div v-if="showCategory === true" class="flex ease-in-out w-full justify-center items-center mb-4"
         :class="{ 'slide-fade-leave-active': showCategory == false }">
           <div v-for="(options, i) in category" :key="i" class="w-32 h-32 mx-4 text-center">
-            <img class="mx-auto h-14 mt-6 cursor-pointer" :src="require(`@/assets/imgs/types-food/${options.icon}`)" :alt="options.alt"/>
+            <img class="mx-auto h-14 mt-8 cursor-pointer" :src="require(`@/assets/imgs/types-food/${options.icon}`)" :alt="options.alt"/>
             <p class="mt-2 text-black text-md cursor-pointer delay-100 hover:font-semibold">{{ options.title }}</p>
           </div>
         </div>

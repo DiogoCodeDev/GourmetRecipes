@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <div class="flex items-center w-full h-16 bg-neutral-200">
+    <div class="my-12">
+        <div class="flex items-center mb-8 w-full h-8">
             <img class="ml-44 mr-4 h-3 -rotate-90" :src="require('@/assets/imgs/arrow-icon.webp')" alt="" />
-            <p class="font-semibold"> Ultimas Notícias </p>
+            <p class="font-semibold text-lg"> Ultimas Notícias </p>
         </div>
-        <div class="flex flex-wrap items-center justify-center w-full h-auto bg-white">
-            <div v-for="(options, i) in news" :key="i" class="mt-4 mb-4 mx-4 md:mx-8 bg-green-200">
+        <div class="flex flex-wrap items-center justify-center w-full h-auto">
+            <div v-for="(options, i) in news" :key="i" class="mt-4 mb-4 mx-4 md:mx-6 bg-green-200">
                 <div class="w-80 h-32" :style="{ backgroundImage: `url(${options.img})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
                 </div>
                 <div class="w-80 h-80 bg-neutral-100">

@@ -20,33 +20,15 @@
     data() {
       return {
         name: 'NavBar',
-        optionsNav: [
-        {
-            path: '',
-            text: 'Home', 
-            icon: ''
-          },  
-        {
-            path: '',
-            text: 'Receitas', //vai conter receitas por categorias, jantar, lanche, bebidas, saudaveis, sobremesas, café da manhã
-            icon: ''
-          },
-          {
-            path: '',
-            text: 'Favoritos', //vai se encaixar na categoria de favoritos da galera, onde 1 por categoria será o escolhido
-            icon: ''
-          },
-          {
-            path: '',
-            text: 'Típicas', // algumas comidas tipicas de paises, selecionados por continente ou paises
-            icon: ''
-          },
-          {
-            path: '',
-            text: 'Quem somos?', // um resumo sobre quem é Allan Diogo com direcionamento para o portifólio
-            icon: ''
-          }
-        ] 
+        optionsNav: []
+      }
+    },
+    mounted(){
+      this.getNavOptions();
+    },
+    methods: {
+      getNavOptions(){
+        this.optionsNav = this.$store.state.siteMap;
       }
     }
   }

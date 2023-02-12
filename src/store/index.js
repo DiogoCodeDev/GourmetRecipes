@@ -57,7 +57,7 @@ export default createStore({
       {
         title: 'Bolo de Cenoura', 
         copy: 'Diogo Code',
-        likes: '1238',
+        likes: 1238,
         bg: "bolo-de-cenoura",
         alt: 'Bolo de Cenoura',
         categoryType: 6
@@ -65,7 +65,7 @@ export default createStore({
       {
         title: 'Pudim', 
         copy: 'Diogo Code',
-        likes: '1638',
+        likes: 1638,
         bg: "pudim",
         alt: 'Pudim',
         categoryType: 2
@@ -73,7 +73,7 @@ export default createStore({
       {
         title: 'Suco de Laranja', 
         copy: 'Diogo Code',
-        likes: '738',
+        likes: 738,
         bg: "suco-de-laranja",
         alt: 'Suco de Laranja',
         categoryType: 5
@@ -81,7 +81,7 @@ export default createStore({
       {
         title: 'Pastel de Carne', 
         copy: 'Diogo Code',
-        likes: '2015',
+        likes: 2015,
         bg: "pastel-de-carne",
         alt: 'Pastel de Carne',
         categoryType: 1
@@ -89,7 +89,7 @@ export default createStore({
       {
         title: 'Sonho de Creme', 
         copy: 'Diogo Code',
-        likes: '538',
+        likes: 538,
         bg: "sonho-creme",
         alt: 'Sonho de Creme',
         categoryType: 2
@@ -97,7 +97,7 @@ export default createStore({
       {
         title: 'Pizza', 
         copy: 'Diogo Code',
-        likes: '1315',
+        likes: 1315,
         bg: "pizza-de-calabresa",
         alt: 'Pizza de Calabresa',
         categoryType: 1
@@ -105,7 +105,7 @@ export default createStore({
       {
         title: 'Salada Fitness', 
         copy: 'Diogo Code',
-        likes: '642',
+        likes: 642,
         bg: "salada",
         alt: 'Salada Fitness',
         categoryType: 4
@@ -113,7 +113,7 @@ export default createStore({
       {
         title: 'Feijoada', 
         copy: 'Diogo Code',
-        likes: '415',
+        likes: 415,
         bg: "feijoada",
         alt: 'feijoada',
         categoryType: 7
@@ -228,13 +228,74 @@ export default createStore({
         date: '12/02/2023',
         created: 'Diogo Code',
       }
-    ]
+    ],
+    siteMap: [
+      {
+          path: '',
+          text: 'Home', 
+          icon: ''
+        },  
+      {
+          path: '',
+          text: 'Receitas', 
+          icon: ''
+        },
+        {
+          path: '',
+          text: 'Favoritos', 
+          icon: ''
+        },
+        {
+          path: '',
+          text: 'Típicas', 
+          icon: ''
+        },
+        {
+          path: '',
+          text: 'Quem somos?', 
+          icon: ''
+        }
+    ],
+    copyright :{
+      createdby: "Diogo Code",
+      socialmidias: [
+        {
+          text: 'GitHub',
+          icon: 'github.svg',
+          link: '',
+        },
+        {
+          text: 'Whatsapp',
+          icon: 'whatsapp.svg',
+          link: '',
+        },
+        {
+          text: 'Instagram',
+          icon: 'instagram.svg',
+          link: '',
+        },
+        {
+          text: 'Portfólio',
+          icon: 'portfolio.svg',
+          link: '',
+        }
+      ]
+    } 
   },
   getters: {
   },
   mutations: {
+    SET_likeRecipeUser(state, value) {
+      state.optionsRecipesMovie = value;
+    },
   },
   actions: {
+    set_likeRecipe({commit, state}, payload) {
+      const { index, arrayRecipes } = payload;
+      state.optionsRecipesMovie = arrayRecipes
+      state.optionsRecipesMovie[index].likes += 1
+      commit('SET_likeRecipeUser', state.optionsRecipesMovie)
+    },
   },
   modules: {
   }
