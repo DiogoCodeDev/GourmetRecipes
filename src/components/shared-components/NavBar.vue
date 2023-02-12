@@ -7,7 +7,7 @@
                 </div>
             </section>
             <section class="flex items-center justify-end w-4/6 h-20">
-                <ul class="flex items-center mr-16 justify-evenly w-3/5 h-8">
+                <ul class="flex items-center mr-16 justify-evenly w-4/5 h-8">
                   <li v-for="(options, i) in optionsNav" :key="i" class="text-black hover:text-yellow-500 cursor-pointer delay-100 ease-in duration-100 font-semibold">{{options.text}}</li>
                 </ul>
             </section>
@@ -21,7 +21,12 @@
       return {
         name: 'NavBar',
         optionsNav: [
-          {
+        {
+            path: '',
+            text: 'Home', 
+            icon: ''
+          },  
+        {
             path: '',
             text: 'Receitas', //vai conter receitas por categorias, jantar, lanche, bebidas, saudaveis, sobremesas, café da manhã
             icon: ''

@@ -5,7 +5,7 @@
         <img class="h-3 cursor-pointer mr-28 duration-100" id="arrow" @click="hiddeCategory()" :src="require('@/assets/imgs/arrow-icon.webp')" alt=""/>
       </div>
       <transition name="slide-fade">
-        <div v-if="showCategory === true" class="flex ease-in-out w-full justify-center items-center bg-neutral-50"
+        <div v-if="showCategory === true" class="flex ease-in-out w-full justify-center items-center bg-white"
         :class="{ 'slide-fade-leave-active': showCategory == false }">
           <div v-for="(options, i) in category" :key="i" class="w-32 h-32 mx-4 text-center">
             <img class="mx-auto h-14 mt-6 cursor-pointer" :src="require(`@/assets/imgs/types-food/${options.icon}`)" :alt="options.alt"/>
@@ -45,7 +45,7 @@
   }
   </script>
   
-  <style>
+  <style scoped>
   .slide-fade-enter-active {
     transition: all .2s ease-in;
   }
