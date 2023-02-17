@@ -6,7 +6,7 @@
         </div>
         <div class="flex items-center justify-center w-full h-auto">
             <div class="flex flex-wrap justify-center items-center w-5/6 h-auto">
-                <div v-for="(options, i) in optionsRecipe" :key="i" class="w-56 mt-8 md:mx-6 bg-neutral-200 transition-transform duration-300 transform hover:-translate-y-1 hover:scale-105">
+                <div v-for="(options, i) in optionsRecipe" :key="i" class="w-56 mt-8 shadow-md md:mx-6 bg-neutral-200 transition-transform duration-300 transform hover:-translate-y-1 hover:scale-105">
                     <div class="w-56 h-20" :style="{ backgroundImage: `url(${options.bg})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
                     </div>
                     <div class="flex w-56 h-20">
